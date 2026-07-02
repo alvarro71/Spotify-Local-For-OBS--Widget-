@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Overlay</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="card-wrapper">
+  <div class="card hidden" id="card">
+    <div class="art-container">
+      <img id="albumArt" src="" class="paused" />
+    </div>
+    <div class="info">
+      <div class="title-container">
+        <div class="title" id="trackTitle"></div>
+      </div>
+      <div class="artist-container">
+        <div class="artist" id="trackArtist"></div>
+      </div>
+      <div class="progress-container">
+        <span class="time" id="currentTime">0:00</span>
+        <div class="bar">
+          <div class="progress" id="progressBar"></div>
+        </div>
+        <span class="time" id="totalTime">0:00</span>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

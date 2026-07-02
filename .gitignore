@@ -1,0 +1,45 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env
+
+# Build and Publish outputs
+bin/
+obj/
+publish/
+build/
+output/
+
+# Large binaries and assets (GitHub has a 100MB file limit)
+# The self-contained installer should be shared via Google Drive/Discord or uploaded as a GitHub Release asset.
+Instalador_Spotify_Overlay/
+*.exe
+*.dll
+*.pdb
+Resources/obs-spotify-overlay.dll
+Resources/SpotifyOverlayServer.exe
+OBS-PLUGIN/obs-sdk/
+OBS-PLUGIN/obs-windows.zip
+*.zip
+
+# Archived historical mess (keeps the GitHub repository clean)
+old_archive/
+
+# Temporary and local assets
+spotify_original.png
+obs_original.png
+spotify_temp.png
+obs_temp.png
+
+# IDE and OS specific
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+Thumbs.db
+ehthumbs.db
+Desktop.ini
