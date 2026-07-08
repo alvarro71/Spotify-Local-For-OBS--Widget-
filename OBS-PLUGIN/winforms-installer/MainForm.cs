@@ -405,6 +405,21 @@ namespace SpotifyOverlayInstaller
 
             try
             {
+                // Terminate any running SpotifyOverlayServer.exe process to release files
+                try
+                {
+                    foreach (var process in System.Diagnostics.Process.GetProcessesByName("SpotifyOverlayServer"))
+                    {
+                        AppendLog("· Deteniendo proceso activo: SpotifyOverlayServer.exe...");
+                        process.Kill();
+                        process.WaitForExit(3000);
+                    }
+                }
+                catch (Exception pEx)
+                {
+                    AppendLog("· Nota: No se pudo verificar/detener el servidor activo: " + pEx.Message);
+                }
+
                 SetStatus("Buscando OBS Studio...", Color.White);
                 AppendLog("▶ Buscando OBS Studio...");
 
@@ -521,6 +536,21 @@ namespace SpotifyOverlayInstaller
 
             try
             {
+                // Terminate any running SpotifyOverlayServer.exe process to release files
+                try
+                {
+                    foreach (var process in System.Diagnostics.Process.GetProcessesByName("SpotifyOverlayServer"))
+                    {
+                        AppendLog("· Deteniendo proceso activo: SpotifyOverlayServer.exe...");
+                        process.Kill();
+                        process.WaitForExit(3000);
+                    }
+                }
+                catch (Exception pEx)
+                {
+                    AppendLog("· Nota: No se pudo verificar/detener el servidor activo: " + pEx.Message);
+                }
+
                 SetStatus("Buscando OBS Studio...", Color.White);
                 AppendLog("▶ Iniciando desinstalación...");
 
@@ -804,7 +834,7 @@ namespace SpotifyOverlayInstaller
             // Setup WebView2 Preview Control
             webViewPreview = new Microsoft.Web.WebView2.WinForms.WebView2
             {
-                Size = new Size(490, 110),
+                Size = new Size(490, 150),
                 Location = new Point(15, 128),
                 BackColor = Color.FromArgb(20, 20, 25),
                 DefaultBackgroundColor = Color.Transparent
@@ -816,7 +846,7 @@ namespace SpotifyOverlayInstaller
                 Text = "✨ Aplicar Aspecto",
                 Font = new Font("Segoe UI", 11, FontStyle.Bold),
                 Size = new Size(180, 40),
-                Location = new Point(15, 248),
+                Location = new Point(15, 288),
                 BackColor = SpotifyGreen,
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -833,7 +863,7 @@ namespace SpotifyOverlayInstaller
                 Font = new Font("Segoe UI", 9.5f, FontStyle.Italic),
                 ForeColor = SpotifyGreen,
                 Size = new Size(300, 40),
-                Location = new Point(205, 248),
+                Location = new Point(205, 288),
                 TextAlign = ContentAlignment.MiddleLeft
             };
             configPanel.Controls.Add(configStatusLabel);
@@ -844,7 +874,7 @@ namespace SpotifyOverlayInstaller
                 Font = new Font("Segoe UI", 8.5f),
                 ForeColor = TextMutedColor,
                 Size = new Size(490, 35),
-                Location = new Point(15, 298)
+                Location = new Point(15, 338)
             };
             configPanel.Controls.Add(helpBox);
 
