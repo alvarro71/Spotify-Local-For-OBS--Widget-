@@ -34,6 +34,7 @@ spotify_temp.png
 obs_temp.png
 
 # IDE and OS specific
+.vscode/
 .vs/
 .idea/
 *.suo
