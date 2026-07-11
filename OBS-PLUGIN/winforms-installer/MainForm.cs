@@ -327,8 +327,11 @@ namespace SpotifyOverlayInstaller
                 string[] quickPaths = {
                     Path.Combine(root, @"SteamLibrary\steamapps\common\OBS Studio"),
                     Path.Combine(root, @"Steam\steamapps\common\OBS Studio"),
+                    Path.Combine(root, @"Program Files\obs-studio"),
                     Path.Combine(root, @"Program Files\OBS Studio"),
+                    Path.Combine(root, @"Program Files (x86)\obs-studio"),
                     Path.Combine(root, @"Program Files (x86)\OBS Studio"),
+                    Path.Combine(root, @"Programs\obs-studio"),
                     Path.Combine(root, @"Programs\OBS Studio")
                 };
 
@@ -343,9 +346,13 @@ namespace SpotifyOverlayInstaller
             }
 
             string[] userPaths = {
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"Programs\obs-studio"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"Programs\OBS Studio"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"obs-studio"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"OBS Studio"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "obs-studio"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "OBS Studio"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "obs-studio"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "OBS Studio")
             };
 
@@ -1146,8 +1153,11 @@ namespace SpotifyOverlayInstaller
                 string[] quickPaths = {
                     Path.Combine(root, @"SteamLibrary\steamapps\common\OBS Studio"),
                     Path.Combine(root, @"Steam\steamapps\common\OBS Studio"),
+                    Path.Combine(root, @"Program Files\obs-studio"),
                     Path.Combine(root, @"Program Files\OBS Studio"),
+                    Path.Combine(root, @"Program Files (x86)\obs-studio"),
                     Path.Combine(root, @"Program Files (x86)\OBS Studio"),
+                    Path.Combine(root, @"Programs\obs-studio"),
                     Path.Combine(root, @"Programs\OBS Studio")
                 };
 
@@ -1158,9 +1168,13 @@ namespace SpotifyOverlayInstaller
             }
 
             string[] userPaths = {
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"Programs\obs-studio"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"Programs\OBS Studio"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"obs-studio"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), @"OBS Studio"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "obs-studio"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "OBS Studio"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "obs-studio"),
                 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86), "OBS Studio")
             };
 
